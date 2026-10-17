@@ -33,6 +33,10 @@ npm run dev
 
 미리듣기가 끝나면 **계속 듣기 / Keep Listening**을 눌러 끊긴 시점부터 재생합니다. 사용자가 지정한 컷 길이를 그대로 적용했습니다. 3번 17초 구간에는 보컬이 포함될 수 있습니다. 이 영상들의 오디오를 행사 및 배포에 사용할 권한을 확인하세요.
 
+## 게임 크레딧
+
+찬양 제목, 아티스트, 원본 영상 링크는 문제 중에 노출되지 않습니다. 게임이 끝난 뒤 최종 결과 화면의 접힌 `게임 크레딧 · 찬양 출처`를 열면 확인할 수 있습니다. 출처 표기는 음원 사용 허가를 대신하지 않습니다.
+
 ## 구조
 
 ```text
@@ -54,7 +58,7 @@ npm test
 npm run build
 ```
 
-20개 자동 테스트가 팀 생성, 객관식 점수, 폭탄과 방패, 점수 교환, 음수 방지, 중복 지급 방지, 관리자 결과 변경, 새로고침 복원, 종료/재시작, IndexedDB 오디오, JSON 복원, 한 소절 찬스를 검사합니다. 헤드리스 Chrome에서 성경 문제, 찬양 문제, 오디오 포함 ZIP 백업과 복원의 실제 화면 흐름도 확인했습니다. 개발 서버를 실행한 상태에서 `node scripts/browser-qa.mjs`, `node scripts/song-qa.mjs`, `node scripts/backup-qa.mjs`, `node scripts/timer-board-qa.mjs`로 재검증할 수 있습니다.
+20개 자동 테스트가 팀 생성, 객관식 점수, 폭탄과 방패, 점수 교환, 음수 방지, 중복 지급 방지, 관리자 결과 변경, 새로고침 복원, 종료/재시작, IndexedDB 오디오, JSON 복원, 한 소절 찬스를 검사합니다. 헤드리스 Chrome에서 성경 문제, 찬양 문제, 오디오 포함 ZIP 백업과 복원의 실제 화면 흐름도 확인했습니다. 개발 서버를 실행한 상태에서 `node scripts/browser-qa.mjs`, `node scripts/song-qa.mjs`, `node scripts/backup-qa.mjs`, `node scripts/timer-board-qa.mjs`, `node scripts/credits-qa.mjs`로 재검증할 수 있습니다.
 
 ## 디자인 에셋
 
@@ -65,6 +69,7 @@ npm run build
 - 사회자가 정답과 한 소절 부르기의 성공 여부를 직접 판정합니다.
 - 일반 JSON 백업에는 게임 데이터가 들어갑니다. 오디오 포함 ZIP 백업에는 게임 데이터, 문제은행, 기본 네 곡의 미리듣기와 전체 음원, IndexedDB에 업로드한 음원이 함께 들어갑니다. ZIP 복원은 동일한 앱 버전의 로컬 정적 에셋을 사용합니다.
 - 브라우저별 localStorage/IndexedDB 용량 제한이 있으므로 행사 전에 오디오 포함 ZIP 백업을 내려받는 것이 좋습니다.
+
 
 
 
