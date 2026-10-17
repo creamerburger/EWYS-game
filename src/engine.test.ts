@@ -1,0 +1,15 @@
+import {describe,it,expect} from 'vitest';
+import {defaultQuestions} from './data';
+import {applyEvent,defaultSettings,events,mcPoints,newGame,weightedPick} from './engine';
+
+const ev=(kind:string)=>events.find(e=>e.kind===kind)!;
+describe('score rules / 점수 규칙',()=>{
+ it('starts a playable four-team game / 4팀 게임 시작',()=>{const g=newGame(defaultQuestions,defaultSettings);expect(g.teams).toHaveLength(4);expect(g.questions).toHaveLength(29);expect(g.teams.every(t=>t.score===0)).toBe(true)});
+ it('configures four subjective song questions / 주관식 찬양 문제',()=>{const songs=defaultQuestions.filter(q=>q.type==='audio');expect(songs.map(q=>q.previewSeconds)).toEqual([8,1,17,3]);expect(songs.every(q=>q.timeLimit===30&&q.choices.length===0&&q.audioFullUrl)).toBe(true);expect(songs.map(q=>q.points)).toEqual([200,250,200,200]);expect(newGame(defaultQuestions,defaultSettings).questions.filter(q=>q.type==='audio').map(q=>q.points)).toEqual([200,250,200,200])});
+ it('awards 20% rounded to tens / 객관식 20%와 10점 반올림',()=>{expect([50,80,150,300,500].map(mcPoints)).toEqual([10,20,30,60,100])});
+ it('keeps earned points when a bomb gives zero bonus / 폭탄은 기본 점수 유지',()=>{const g=newGame(defaultQuestions,defaultSettings);g.teams[0].score=300;expect(applyEvent(g.teams,0,ev('points'))[0].score).toBe(400);expect(applyEvent(g.teams,0,ev('bomb'))[0].score).toBe(300);expect(applyEvent(g.teams,0,ev('double'))[0].score).toBe(600)});
+ it('never draws point-deduction events / 감점 이벤트 추첨 방지',()=>{const forbidden=['minus','megaBomb','steal','thief','redistribute','curse'];for(let i=0;i<1000;i++)expect(forbidden).not.toContain(weightedPick(true,100,()=>i/1000).kind)});
+ it('swaps scores atomically / 점수 교환',()=>{const t=newGame(defaultQuestions,defaultSettings).teams;t[0].score=100;t[1].score=900;const out=applyEvent(t,0,ev('swapChoice'),1);expect([out[0].score,out[1].score]).toEqual([900,100]);expect([t[0].score,t[1].score]).toEqual([100,900])});
+ it('turns a shielded bomb into 100 bonus points / 방패는 폭탄에서 100점 보너스',()=>{const t=newGame(defaultQuestions,defaultSettings).teams;t[0].score=500;t[0].shield=1;const out=applyEvent(t,0,ev('bomb'));expect(out[0].score).toBe(600);expect(out[0].shield).toBe(0);expect(out[0].bombs).toBe(1)});
+ it('makes old deduction events harmless / 이전 감점 이벤트도 안전하게 처리',()=>{const t=newGame(defaultQuestions,defaultSettings).teams;t[0].score=50;t[1].score=20;const oldMinus={kind:'minus' as const,value:200,label:{ko:'-200점',en:'-200 points'},weight:0};const oldSteal={...oldMinus,kind:'steal' as const};expect(applyEvent(t,0,oldMinus)[0].score).toBe(50);const out=applyEvent(t,0,oldSteal,1);expect(out[0].score).toBe(50);expect(out[1].score).toBe(20)});
+});

@@ -1,0 +1,572 @@
+{
+  "title": "Bible Quiz — Team Bomb Game",
+  "language": "en",
+  "version": "1.0",
+  "scoring": {
+    "pointsByDifficulty": [
+      50,
+      80,
+      150,
+      300,
+      500
+    ],
+    "multipleChoiceMultiplier": 0.5,
+    "rounding": "floor"
+  },
+  "categories": [
+    "Bible Characters",
+    "Bible Events",
+    "Jesus and the Gospels",
+    "Bible Numbers",
+    "Bible Challenge"
+  ],
+  "questions": [
+    {
+      "id": "bible-01-01",
+      "category": "Bible Characters",
+      "number": 1,
+      "points": 50,
+      "type": "text",
+      "question": "Who was the mother of Jesus?",
+      "answer": "Mary",
+      "acceptedAnswers": [
+        "Mary",
+        "Miriam"
+      ],
+      "choices": [
+        "Mary",
+        "Martha",
+        "Esther",
+        "Ruth"
+      ],
+      "correctChoiceIndex": 0,
+      "hint": null,
+      "reference": "Luke 1:30-31"
+    },
+    {
+      "id": "bible-01-02",
+      "category": "Bible Characters",
+      "number": 2,
+      "points": 80,
+      "type": "text",
+      "question": "Who defeated Goliath?",
+      "answer": "David",
+      "acceptedAnswers": [
+        "David"
+      ],
+      "choices": [
+        "Samson",
+        "David",
+        "Saul",
+        "Jonathan"
+      ],
+      "correctChoiceIndex": 1,
+      "hint": null,
+      "reference": "1 Samuel 17"
+    },
+    {
+      "id": "bible-01-03",
+      "category": "Bible Characters",
+      "number": 3,
+      "points": 150,
+      "type": "text",
+      "question": "Who climbed a sycamore-fig tree to see Jesus?",
+      "answer": "Zacchaeus",
+      "acceptedAnswers": [
+        "Zacchaeus"
+      ],
+      "choices": [
+        "Nicodemus",
+        "Bartimaeus",
+        "Zacchaeus",
+        "Lazarus"
+      ],
+      "correctChoiceIndex": 2,
+      "hint": null,
+      "reference": "Luke 19:1-4"
+    },
+    {
+      "id": "bible-01-04",
+      "category": "Bible Characters",
+      "number": 4,
+      "points": 300,
+      "type": "text",
+      "question": "Who sang and prayed with Paul in prison before an earthquake?",
+      "answer": "Silas",
+      "acceptedAnswers": [
+        "Silas"
+      ],
+      "choices": [
+        "Silas",
+        "Barnabas",
+        "Timothy",
+        "Mark"
+      ],
+      "correctChoiceIndex": 0,
+      "hint": null,
+      "reference": "Acts 16:25-26"
+    },
+    {
+      "id": "bible-01-05",
+      "category": "Bible Characters",
+      "number": 5,
+      "points": 500,
+      "type": "text",
+      "question": "What was the name of the young man who fell from a window during Paul’s long speech in Troas?",
+      "answer": "Eutychus",
+      "acceptedAnswers": [
+        "Eutychus"
+      ],
+      "choices": [
+        "Tychicus",
+        "Epaphras",
+        "Onesimus",
+        "Eutychus"
+      ],
+      "correctChoiceIndex": 3,
+      "hint": null,
+      "reference": "Acts 20:9"
+    },
+    {
+      "id": "bible-02-01",
+      "category": "Bible Events",
+      "number": 1,
+      "points": 50,
+      "type": "text",
+      "question": "What did Noah build before the flood?",
+      "answer": "An ark",
+      "acceptedAnswers": [
+        "An ark",
+        "Ark"
+      ],
+      "choices": [
+        "An altar",
+        "A tower",
+        "An ark",
+        "A temple"
+      ],
+      "correctChoiceIndex": 2,
+      "hint": null,
+      "reference": "Genesis 6"
+    },
+    {
+      "id": "bible-02-02",
+      "category": "Bible Events",
+      "number": 2,
+      "points": 80,
+      "type": "text",
+      "question": "Which sea did the Israelites cross after leaving Egypt?",
+      "answer": "The Red Sea",
+      "acceptedAnswers": [
+        "The Red Sea",
+        "Red Sea",
+        "Sea of Reeds"
+      ],
+      "choices": [
+        "The Red Sea",
+        "The Dead Sea",
+        "The Sea of Galilee",
+        "The Mediterranean Sea"
+      ],
+      "correctChoiceIndex": 0,
+      "hint": null,
+      "reference": "Exodus 14"
+    },
+    {
+      "id": "bible-02-03",
+      "category": "Bible Events",
+      "number": 3,
+      "points": 150,
+      "type": "text",
+      "question": "How many times did the Israelites march around Jericho on the seventh day?",
+      "answer": "Seven",
+      "acceptedAnswers": [
+        "Seven",
+        "7",
+        "Seven times"
+      ],
+      "choices": [
+        "Three",
+        "Five",
+        "Seven",
+        "Twelve"
+      ],
+      "correctChoiceIndex": 2,
+      "hint": null,
+      "reference": "Joshua 6:15"
+    },
+    {
+      "id": "bible-02-04",
+      "category": "Bible Events",
+      "number": 4,
+      "points": 300,
+      "type": "text",
+      "question": "On which mountain did Elijah confront the prophets of Baal?",
+      "answer": "Mount Carmel",
+      "acceptedAnswers": [
+        "Mount Carmel",
+        "Carmel"
+      ],
+      "choices": [
+        "Mount Sinai",
+        "Mount Moriah",
+        "Mount of Olives",
+        "Mount Carmel"
+      ],
+      "correctChoiceIndex": 3,
+      "hint": null,
+      "reference": "1 Kings 18:19-20"
+    },
+    {
+      "id": "bible-02-05",
+      "category": "Bible Events",
+      "number": 5,
+      "points": 500,
+      "type": "text",
+      "question": "At which city were the Israelites defeated after Achan took forbidden items?",
+      "answer": "Ai",
+      "acceptedAnswers": [
+        "Ai"
+      ],
+      "choices": [
+        "Jericho",
+        "Ai",
+        "Gibeon",
+        "Lachish"
+      ],
+      "correctChoiceIndex": 1,
+      "hint": null,
+      "reference": "Joshua 7"
+    },
+    {
+      "id": "bible-03-01",
+      "category": "Jesus and the Gospels",
+      "number": 1,
+      "points": 50,
+      "type": "text",
+      "question": "In which town was Jesus born?",
+      "answer": "Bethlehem",
+      "acceptedAnswers": [
+        "Bethlehem"
+      ],
+      "choices": [
+        "Nazareth",
+        "Jerusalem",
+        "Bethlehem",
+        "Capernaum"
+      ],
+      "correctChoiceIndex": 2,
+      "hint": null,
+      "reference": "Luke 2:4-7"
+    },
+    {
+      "id": "bible-03-02",
+      "category": "Jesus and the Gospels",
+      "number": 2,
+      "points": 80,
+      "type": "text",
+      "question": "What did Jesus turn water into at the wedding in Cana?",
+      "answer": "Wine",
+      "acceptedAnswers": [
+        "Wine"
+      ],
+      "choices": [
+        "Wine",
+        "Oil",
+        "Honey",
+        "Milk"
+      ],
+      "correctChoiceIndex": 0,
+      "hint": null,
+      "reference": "John 2:1-11"
+    },
+    {
+      "id": "bible-03-03",
+      "category": "Jesus and the Gospels",
+      "number": 3,
+      "points": 150,
+      "type": "text",
+      "question": "How many fish were used in the feeding of the five thousand?",
+      "answer": "Two",
+      "acceptedAnswers": [
+        "Two",
+        "2",
+        "Two fish"
+      ],
+      "choices": [
+        "Three",
+        "Five",
+        "Seven",
+        "Two"
+      ],
+      "correctChoiceIndex": 3,
+      "hint": null,
+      "reference": "Matthew 14:17-21"
+    },
+    {
+      "id": "bible-03-04",
+      "category": "Jesus and the Gospels",
+      "number": 4,
+      "points": 300,
+      "type": "text",
+      "question": "Which two Old Testament figures appeared with Jesus at the Transfiguration?",
+      "answer": "Moses and Elijah",
+      "acceptedAnswers": [
+        "Moses and Elijah",
+        "Elijah and Moses"
+      ],
+      "choices": [
+        "Moses and Elijah",
+        "Abraham and Isaac",
+        "David and Solomon",
+        "Enoch and Noah"
+      ],
+      "correctChoiceIndex": 0,
+      "hint": null,
+      "reference": "Matthew 17:1-3"
+    },
+    {
+      "id": "bible-03-05",
+      "category": "Jesus and the Gospels",
+      "number": 5,
+      "points": 500,
+      "type": "text",
+      "question": "Where was Simon, the man compelled to carry Jesus’ cross, from?",
+      "answer": "Cyrene",
+      "acceptedAnswers": [
+        "Cyrene"
+      ],
+      "choices": [
+        "Bethany",
+        "Jericho",
+        "Caesarea",
+        "Cyrene"
+      ],
+      "correctChoiceIndex": 3,
+      "hint": null,
+      "reference": "Mark 15:21"
+    },
+    {
+      "id": "bible-04-01",
+      "category": "Bible Numbers",
+      "number": 1,
+      "points": 50,
+      "type": "text",
+      "question": "How many apostles did Jesus appoint as the Twelve?",
+      "answer": "Twelve",
+      "acceptedAnswers": [
+        "Twelve",
+        "12"
+      ],
+      "choices": [
+        "Seven",
+        "Ten",
+        "Twelve",
+        "Forty"
+      ],
+      "correctChoiceIndex": 2,
+      "hint": null,
+      "reference": "Matthew 10:1-4"
+    },
+    {
+      "id": "bible-04-02",
+      "category": "Bible Numbers",
+      "number": 2,
+      "points": 80,
+      "type": "text",
+      "question": "How many days did Jesus fast in the wilderness?",
+      "answer": "Forty days",
+      "acceptedAnswers": [
+        "Forty days",
+        "40",
+        "40 days"
+      ],
+      "choices": [
+        "Forty days",
+        "Seven days",
+        "Twelve days",
+        "Thirty days"
+      ],
+      "correctChoiceIndex": 0,
+      "hint": null,
+      "reference": "Matthew 4:2"
+    },
+    {
+      "id": "bible-04-03",
+      "category": "Bible Numbers",
+      "number": 3,
+      "points": 150,
+      "type": "text",
+      "question": "For how many days did Jesus appear to the apostles after his resurrection before his ascension?",
+      "answer": "Forty days",
+      "acceptedAnswers": [
+        "Forty days",
+        "40",
+        "40 days"
+      ],
+      "choices": [
+        "Three days",
+        "Seven days",
+        "Fifty days",
+        "Forty days"
+      ],
+      "correctChoiceIndex": 3,
+      "hint": null,
+      "reference": "Acts 1:3"
+    },
+    {
+      "id": "bible-04-04",
+      "category": "Bible Numbers",
+      "number": 4,
+      "points": 300,
+      "type": "text",
+      "question": "How many men remained in Gideon’s army after God reduced its size?",
+      "answer": "Three hundred",
+      "acceptedAnswers": [
+        "Three hundred",
+        "300"
+      ],
+      "choices": [
+        "One hundred",
+        "Three hundred",
+        "Seven hundred",
+        "Three thousand"
+      ],
+      "correctChoiceIndex": 1,
+      "hint": null,
+      "reference": "Judges 7:6-7"
+    },
+    {
+      "id": "bible-04-05",
+      "category": "Bible Numbers",
+      "number": 5,
+      "points": 500,
+      "type": "text",
+      "question": "How many large fish were caught in the net in John 21?",
+      "answer": "153",
+      "acceptedAnswers": [
+        "153",
+        "153 fish",
+        "One hundred fifty-three"
+      ],
+      "choices": [
+        "120",
+        "144",
+        "153",
+        "200"
+      ],
+      "correctChoiceIndex": 2,
+      "hint": null,
+      "reference": "John 21:11"
+    },
+    {
+      "id": "bible-05-01",
+      "category": "Bible Challenge",
+      "number": 1,
+      "points": 50,
+      "type": "text",
+      "question": "What is the first book of the Bible?",
+      "answer": "Genesis",
+      "acceptedAnswers": [
+        "Genesis"
+      ],
+      "choices": [
+        "Exodus",
+        "Genesis",
+        "Matthew",
+        "Psalms"
+      ],
+      "correctChoiceIndex": 1,
+      "hint": null,
+      "reference": "Bible book order"
+    },
+    {
+      "id": "bible-05-02",
+      "category": "Bible Challenge",
+      "number": 2,
+      "points": 80,
+      "type": "text",
+      "question": "What is the last book of the Bible?",
+      "answer": "Revelation",
+      "acceptedAnswers": [
+        "Revelation",
+        "Book of Revelation"
+      ],
+      "choices": [
+        "Jude",
+        "Malachi",
+        "Revelation",
+        "Romans"
+      ],
+      "correctChoiceIndex": 2,
+      "hint": null,
+      "reference": "Bible book order"
+    },
+    {
+      "id": "bible-05-03",
+      "category": "Bible Challenge",
+      "number": 3,
+      "points": 150,
+      "type": "text",
+      "question": "Whom did Paul ask Philemon to welcome back?",
+      "answer": "Onesimus",
+      "acceptedAnswers": [
+        "Onesimus"
+      ],
+      "choices": [
+        "Timothy",
+        "Tychicus",
+        "Epaphras",
+        "Onesimus"
+      ],
+      "correctChoiceIndex": 3,
+      "hint": null,
+      "reference": "Philemon 1:10-12"
+    },
+    {
+      "id": "bible-05-04",
+      "category": "Bible Challenge",
+      "number": 4,
+      "points": 300,
+      "type": "text",
+      "question": "Who led Israel after the death of Moses?",
+      "answer": "Joshua",
+      "acceptedAnswers": [
+        "Joshua"
+      ],
+      "choices": [
+        "Joshua",
+        "Caleb",
+        "Aaron",
+        "Gideon"
+      ],
+      "correctChoiceIndex": 0,
+      "hint": null,
+      "reference": "Joshua 1:1-2"
+    },
+    {
+      "id": "bible-05-05",
+      "category": "Bible Challenge",
+      "number": 5,
+      "points": 500,
+      "type": "text",
+      "question": "Who came back to life after touching the bones of Elisha?",
+      "answer": "An unnamed dead man",
+      "acceptedAnswers": [
+        "An unnamed dead man",
+        "Unnamed man",
+        "An unnamed man",
+        "A dead man whose name is not recorded"
+      ],
+      "choices": [
+        "Naaman",
+        "The Shunammite woman’s son",
+        "An unnamed dead man",
+        "Gehazi"
+      ],
+      "correctChoiceIndex": 2,
+      "hint": null,
+      "reference": "2 Kings 13:20-21"
+    }
+  ]
+}
