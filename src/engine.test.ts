@@ -1,10 +1,11 @@
 import {describe,it,expect} from 'vitest';
 import {defaultQuestions} from './data';
-import {applyEvent,defaultSettings,effectiveBonusProbability,events,mcPoints,newGame,weightedPick} from './engine';
+import {applyEvent,bonusChance,defaultSettings,effectiveBonusProbability,events,mcPoints,newGame,weightedPick} from './engine';
 
 const ev=(kind:string)=>events.find(e=>e.kind===kind)!;
 describe('score rules / 점수 규칙',()=>{
  it('raises box chance as questions run out, independently of question points',()=>{expect(effectiveBonusProbability(defaultSettings,0,20)).toBe(50);expect(effectiveBonusProbability(defaultSettings,10,20)).toBe(68);expect(effectiveBonusProbability(defaultSettings,20,20)).toBe(85);expect(effectiveBonusProbability({...defaultSettings,bonusProbability:0},20,20)).toBe(0);expect(effectiveBonusProbability({...defaultSettings,bonusProbability:100},20,20)).toBe(100)});
+ it('guarantees the first box and a box after two misses unless disabled',()=>{expect(bonusChance(defaultSettings,1,20,0,0)).toBe(100);expect(bonusChance(defaultSettings,5,20,1,0)).toBeLessThan(100);expect(bonusChance(defaultSettings,5,20,1,2)).toBe(100);expect(bonusChance({...defaultSettings,bonusProbability:0},5,20,0,2)).toBe(0)});
  it('does not reveal the answer in the Bible Numbers question',()=>{const q=defaultQuestions.find(q=>q.id==='bible-04-01')!;expect(q.question.ko).not.toContain(q.answer.ko);expect(q.question.en.toLowerCase()).not.toContain(q.answer.en.toLowerCase());expect(q.reference.en).toBe('Luke 17:11-19')});
  it('starts a playable four-team game / 4팀 게임 시작',()=>{const g=newGame(defaultQuestions,defaultSettings);expect(g.teams).toHaveLength(4);expect(g.questions).toHaveLength(29);expect(g.teams.every(t=>t.score===0)).toBe(true)});
  it('configures four subjective song questions / 주관식 찬양 문제',()=>{const songs=defaultQuestions.filter(q=>q.type==='audio');expect(songs.map(q=>q.previewSeconds)).toEqual([8,1,17,3]);expect(songs.every(q=>q.timeLimit===30&&q.choices.length===0&&q.audioFullUrl)).toBe(true);expect(songs.map(q=>q.points)).toEqual([200,250,200,200]);expect(newGame(defaultQuestions,defaultSettings).questions.filter(q=>q.type==='audio').map(q=>q.points)).toEqual([200,250,200,200])});
