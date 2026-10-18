@@ -352,21 +352,21 @@
       "number": 1,
       "points": 50,
       "type": "text",
-      "question": "How many apostles did Jesus appoint as the Twelve?",
-      "answer": "Twelve",
+      "question": "Of the ten people with leprosy Jesus healed, how many returned to thank him?",
+      "answer": "One",
       "acceptedAnswers": [
-        "Twelve",
-        "12"
+        "One",
+        "1"
       ],
       "choices": [
-        "Seven",
-        "Ten",
-        "Twelve",
-        "Forty"
+        "One",
+        "Two",
+        "Five",
+        "Ten"
       ],
-      "correctChoiceIndex": 2,
+      "correctChoiceIndex": 0,
       "hint": null,
-      "reference": "Matthew 10:1-4"
+      "reference": "Luke 17:11-19"
     },
     {
       "id": "bible-04-02",
